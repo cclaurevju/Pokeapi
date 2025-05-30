@@ -1,5 +1,3 @@
-/* @import '../../index.css' */
-
 .pk-card-container {
     margin: auto;
 }
@@ -7,10 +5,55 @@
 .pk-card {
     width: 378px;
     height: 250px;
-    display: flex;
-    flex-direction: row;
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 10px 20px 0px #AAAFAA;
+    user-select: none;
+    z-index: 10;
+}
+
+.pk-card:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+
+.pk-card:active {
+    filter: brightness(1.1);
+    transition-duration: 100ms;
+}
+
+.pk-card-mask {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 15;
+}
+
+.pk-card-pokeball-mask {
+    width: 313px;
+    position: absolute;
+    left: 201px;
+    top: -32px;
+}
+
+.pk-card-dots-mask {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    width: 100px;
+    height: auto;
+    z-index: inherit;
+}
+
+.pk-card-content {
+    height: 100%;
+    position: relative;
+    bottom: 100%;
+    background-color: transparent;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
 }
 
 .pk-card-properties {
@@ -21,18 +64,16 @@
     width: 50%;
     color: #FFF;
     padding-left: 25px;
+    z-index: 30;
 }
 
 .pk-card-img-container {
-    height: 100%;
     width: 50%;
     position: relative;
 }
 
 .pk-card-img {
-    position: absolute;
+    position: fixed;
     width: 210px;
     height: 210px;
-    right: -45px;
-    bottom: 24px;
 }
