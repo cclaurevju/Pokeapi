@@ -70,10 +70,11 @@
 .pk-card-img-container {
     width: 50%;
     position: relative;
+    right: -40px;
 }
 
 .pk-card-img {
-    position: fixed;
+    /* position: fixed; */
     width: 210px;
     height: 210px;
 }
