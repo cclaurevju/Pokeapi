@@ -1,0 +1,15 @@
+.pk-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 75px;
+}
+
+.pk-card-tag-list {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding-bottom: 47px;
+}

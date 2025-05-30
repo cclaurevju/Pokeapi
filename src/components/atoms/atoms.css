@@ -1,0 +1,37 @@
+.pk-card-id {
+    color:  #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.pk-card-name {
+    color: #FFF;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.pk-card-tag {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    gap: 5px;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+
+.pk-card-tag-text {
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.pk-card-tag-img {
+    width: 1rem;
+}

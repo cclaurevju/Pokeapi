@@ -1,0 +1,15 @@
+.pk-card-list2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: calc(0.25rem * 8);
+    border-color: black;
+    border-width: 10px;
+}
+
+.pk-card-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 50px;
+}
