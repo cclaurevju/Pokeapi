@@ -6,7 +6,7 @@ import PokemonCardList from "./components/template/PokemonCardList";
 function App() {
   return (
     <Layout>
-      <div> CONTENT</div>
+      <div>CONTENT</div>
     </Layout>
   );
 }
