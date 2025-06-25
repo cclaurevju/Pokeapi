@@ -74,7 +74,18 @@
 }
 
 .pk-card-img {
-    /* position: fixed; */
     width: 210px;
     height: 210px;
+}
+
+.search-input {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    width: 800px;
+    padding: 20px 25px;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #F2F2F2;
 }

@@ -4,3 +4,7 @@
 .container {
     padding: calc(0.25rem * 8);
 }
+
+.rotate-180 {
+    transform: rotate(180deg)
+}

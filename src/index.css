@@ -1,16 +1,7 @@
-/* @import "tailwindcss"; */
-    body{
-        font-family: Roboto;
-    }
+p {
+    font-family: Roboto;
+}
 
-    :root {
-        --background-colors-background-type-grass: #8BBE8A
-        --background-colors-background-type-fire: #FFA756
-        --background-colors-background-type-water: #58ABF6
-        --background-colors-background-type-bug: #8BD674
-        --background-colors-background-type-normal: #B5B9C4
-        --background-colors-background-type-poison: #9F6E97
-        --background-colors-background-type-electric: #F2CB55
-        --background-colors-background-type-fairy: #EBA8C3
-        --background-colors-background-type-fighting: #EB4971
+/* TODO import font */
+body {
     }
