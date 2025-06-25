@@ -4,7 +4,7 @@ import "./organisms.css";
 
 export default function Header() {
   return (
-    <div>
+    <div className="header">
       <HeaderBrand />
       <HeaderMenu />
     </div>

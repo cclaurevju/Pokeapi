@@ -3,7 +3,7 @@ import "./molecules.css";
 
 export default function HeaderMenu() {
   return (
-    <div>
+    <div className="header-menu">
       <HeaderMenuOption />
       <HeaderMenuOption />
       <HeaderMenuOption />

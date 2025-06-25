@@ -13,3 +13,11 @@
     gap: 0.25rem;
     padding-bottom: 47px;
 }
+
+.header-brand {
+    display: flex;
+}
+
+.header-menu {
+    display: flex;
+}

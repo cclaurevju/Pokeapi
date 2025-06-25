@@ -3,7 +3,7 @@ import "./molecules.css";
 
 export default function HeaderBrand() {
   return (
-    <div>
+    <div className="header-brand">
       ICON <HeaderBrandTitle />
     </div>
   );
