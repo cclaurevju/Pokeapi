@@ -94,4 +94,10 @@
     background-color: blue;
     display: flex;
     justify-content: space-around;
+    grid-area: header;
+}
+
+.footer {
+    background-color: beige;
+    display: flex;
 }
