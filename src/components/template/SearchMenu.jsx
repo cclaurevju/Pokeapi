@@ -4,6 +4,22 @@ import "./template.css";
 export default function SearchMenu() {
   return (
     <div className="search-menu">
+      {/* <div className="search-menu-mask">
+        <div className="search-menu-content-dots rotate-180">
+          <img
+            className="search-menu-contant-dots-img"
+            src="src\assets\images\masks\dots-horizontal.png"
+            alt=""
+          />
+        </div>
+        <div className="search-menu-content-dots">
+          <img
+            className="search-menu-contant-dots-img"
+            src="src\assets\images\masks\dots-horizontal.png"
+            alt=""
+          />
+        </div>
+      </div> */}
       <div className="search-content">
         <div className="search-menu-content-dots rotate-180">
           <img
@@ -21,7 +37,9 @@ export default function SearchMenu() {
           />
         </div>
       </div>
-      {/* <div>options</div> */}
+      <p className="search-menu-content-helper">
+        Search for Pokémon by name or using the National Pokédex number
+      </p>
     </div>
   );
 }
