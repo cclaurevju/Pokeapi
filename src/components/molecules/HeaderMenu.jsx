@@ -4,9 +4,9 @@ import "./molecules.css";
 export default function HeaderMenu() {
   return (
     <div className="header-menu">
-      <HeaderMenuOption />
-      <HeaderMenuOption />
-      <HeaderMenuOption />
+      <HeaderMenuOption label="Game" />
+      <HeaderMenuOption label="Langs" />
+      <HeaderMenuOption label="Pokedex" />
     </div>
   );
 }
