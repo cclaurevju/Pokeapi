@@ -37,9 +37,13 @@
 }
 
 .header-brand-title {
-
+    font-size: xx-large;
 }
 
 .header-menu-option {
-    
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-style: solid;
+    border-width: 1px;
 }

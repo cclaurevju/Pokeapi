@@ -15,7 +15,12 @@
 }
 
 .header-brand {
+    height: 100%;
     display: flex;
+    align-items: center;
+    img {
+        height: 100%;
+    }
 }
 
 .header-menu {

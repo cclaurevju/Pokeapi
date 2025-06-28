@@ -4,7 +4,8 @@ import "./molecules.css";
 export default function HeaderBrand() {
   return (
     <div className="header-brand">
-      ICON <HeaderBrandTitle />
+      <img src="src/assets/images/brand/brand.png" alt="" />{" "}
+      <HeaderBrandTitle />
     </div>
   );
 }
