@@ -43,7 +43,7 @@
 
 .layout {
     height: 100vh;
-    background-color: red;
+    /* background-color: red; */
     display: grid;
     grid-template-columns: repeat(1fr, 6);
     grid-template-rows: 7% auto 15%;
