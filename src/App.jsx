@@ -1,17 +1,16 @@
 import "./App.css";
-import Footer from "./components/organisms/Footer";
 import PokemonSearcher from "./components/pages/PokemonSearcher";
 import Layout from "./components/template/Layout";
-import PokemonCardList from "./components/template/PokemonCardList";
-import SearchMenu from "./components/template/SearchMenu";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <Layout>
-      <div>
-        <SearchMenu />
-        <PokemonCardList />
-      </div>
-    </Layout>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<PokemonSearcher />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

@@ -3,7 +3,7 @@ import "./template.css";
 
 export default function SearchMenu() {
   return (
-    <div className="search-menu">
+    <div className="search-menu subheader">
       <div className="search-content">
         <div className="search-menu-content-dots rotate-180">
           <img
