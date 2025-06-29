@@ -21,7 +21,7 @@ const languages = [
 ];
 export default function LanguageButtonsList() {
   return (
-    <div>
+    <div className="language-buttons-list">
       {languages.map((lang, i) => {
         return (
           <LanguageButton

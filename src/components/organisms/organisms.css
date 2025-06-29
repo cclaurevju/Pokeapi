@@ -109,3 +109,18 @@
     display: flex;
     grid-area: "footer";
 }
+
+.language-selector {
+    background-color: #EA5D60;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 84px;
+    padding: 0 1.5rem;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white
+}

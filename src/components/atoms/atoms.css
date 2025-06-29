@@ -47,6 +47,12 @@
     padding: 8px 12px;
     cursor: pointer;
 }
+
 .active {
         font-weight: bolder
+}
+
+.lang-button {
+    height: 68px;
+    cursor: pointer;
 }
