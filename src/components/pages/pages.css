@@ -1,0 +1,10 @@
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    img {
+        max-height: 545px;
+        max-width: 672px;
+    }
+}
