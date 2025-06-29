@@ -23,7 +23,7 @@ export default function PokemonCard() {
             <PokemonTagList />
           </div>
           <div className="pk-card-img-container">
-            <img className="pk-card-img" src="src\assets\pngwing.com (1).png" />
+            <img className="pk-card-img" src="src\assets\pokemon.png" />
           </div>
         </div>
       </div>

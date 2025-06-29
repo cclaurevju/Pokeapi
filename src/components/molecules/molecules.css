@@ -33,3 +33,11 @@
     display: flex;
     gap: 1rem;
 }
+
+.game-button-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3rem;
+    justify-content: space-evenly;
+}
