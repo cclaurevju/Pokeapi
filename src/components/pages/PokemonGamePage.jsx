@@ -1,3 +1,10 @@
+import LanguageSelector from "../organisms/LanguageSelector";
+
 export default function PokemonGamePage() {
-  return <div>PokemonGuess</div>;
+  return (
+    <>
+      <LanguageSelector />
+      <div>GAME</div>
+    </>
+  );
 }
