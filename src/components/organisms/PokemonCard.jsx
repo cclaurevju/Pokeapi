@@ -1,8 +1,6 @@
 import PokemonCardInfo from "../molecules/PokemonCardInfo";
 import PokemonTagList from "../molecules/PokemonTagList";
 
-import "./organisms.css";
-
 export default function PokemonCard() {
   return (
     <div className="pk-card-container">

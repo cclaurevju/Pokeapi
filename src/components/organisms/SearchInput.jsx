@@ -1,5 +1,3 @@
-import "./organisms.css";
-
 export default function SearchInput() {
   return (
     <input

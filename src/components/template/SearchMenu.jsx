@@ -1,5 +1,4 @@
 import SearchInput from "../organisms/SearchInput";
-import "./template.css";
 
 export default function SearchMenu() {
   return (

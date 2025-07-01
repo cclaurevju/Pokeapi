@@ -1,5 +1,3 @@
-import "./atoms.css";
-
 export default function PokemonTagBox() {
   const bgColor = "bg-purple-500";
   const icon = "icon";

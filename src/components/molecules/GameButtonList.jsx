@@ -1,6 +1,3 @@
-// import "./molecules.css";
-import Button from "../atoms/Button";
-
 export default function GameButtonList({}) {
   const options = [
     {

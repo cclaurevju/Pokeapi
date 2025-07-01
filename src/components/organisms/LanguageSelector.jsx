@@ -1,5 +1,4 @@
 import LanguageButtonsList from "../molecules/LanguageButtonsList";
-import "./organisms.css";
 
 export default function LanguageSelector() {
   return (

@@ -1,5 +1,4 @@
 import LanguageButton from "../atoms/LanguageButton";
-import "./molecules.css";
 
 const languages = [
   {

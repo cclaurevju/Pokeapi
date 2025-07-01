@@ -1,5 +1,4 @@
 import PokemonTagBox from "../atoms/PokemonTag";
-import "./molecules.css";
 
 export default function PokemonTagList() {
   const tags = [1, 2];
