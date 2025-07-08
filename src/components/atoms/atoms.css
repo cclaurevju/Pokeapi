@@ -1,9 +1,16 @@
 .pk-card-id {
-    color:  #FFF;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.pk-card-id-white {
+    color:  #FFF;
+}
+
+.pk-card-id-black {
+    color: rgba(23, 23, 27, 0.60);
 }
 
 .pk-card-name {
@@ -12,6 +19,14 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.pk-card-name-white {
+    color: #FFF;
+}
+
+.pk-card-name-black {
+    color: #333;
 }
 
 .pk-card-tag {

@@ -1,6 +1,6 @@
-export default function PokemonCardName() {
+export default function PokemonCardName({ color = "white" }) {
   return (
-    <div className="pk-card-name">
+    <div className={`pk-card-name pk-card-name-${color}`}>
       <p>Pokemon</p>
     </div>
   );

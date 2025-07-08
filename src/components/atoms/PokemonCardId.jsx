@@ -1,3 +1,3 @@
-export default function PokemonCardId() {
-  return <div className="pk-card-id"># 0001</div>;
+export default function PokemonCardId({ color = "white" }) {
+  return <div className={`pk-card-id pk-card-id-${color}`}># 0001</div>;
 }
