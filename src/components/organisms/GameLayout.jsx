@@ -16,6 +16,7 @@ export default function GameLayout() {
   const [randomPokemonId, setRandomPokemonId] = useState(() =>
     getRandomIndex(MAX_OPTIONS)
   );
+  const [shake, setShake] = useState(false);
 
   const fetchPokemonInfo = async (id) => {
     const response = await axiosInstance.get(`/pokemon-species/${id}`);
@@ -59,12 +60,19 @@ export default function GameLayout() {
     setIsPokemonHidden(true);
   };
 
+  const triggerShake = () => {
+    setShake(true);
+    setTimeout(() => setShake(false), 500);
+  };
+
   const handleSelection = (option) => {
     if (option.id == selectedPokemon.id) {
       setIsPokemonHidden(false);
       setTimeout(() => {
         handleReset();
       }, 3000);
+    } else {
+      triggerShake();
     }
   };
 
@@ -74,6 +82,7 @@ export default function GameLayout() {
         <PokemonShadow
           imageUrl={selectedPokemon.sprites.other.home.front_default}
           isHidden={isPokemonHidden}
+          shake={shake}
         />
       ) : null}
       <GameButtonList options={pokemons} handleSelection={handleSelection} />
