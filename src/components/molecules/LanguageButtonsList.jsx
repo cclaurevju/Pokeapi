@@ -1,24 +1,27 @@
 import LanguageButton from "../atoms/LanguageButton";
+import { LanguageContext } from "../../contexts/languageContext";
+import { useContext } from "react";
 
 const languages = [
   {
-    value: "japanese",
+    value: "ja",
     flag: "japan",
   },
   {
-    value: "korean",
+    value: "ko",
     flag: "south-korea",
   },
   {
-    value: "english",
+    value: "en",
     flag: "usa",
   },
   {
-    value: "spanish",
+    value: "es",
     flag: "spain",
   },
 ];
 export default function LanguageButtonsList() {
+  const [language, setLanguage] = useContext(LanguageContext);
   return (
     <div className="language-buttons-list">
       {languages.map((lang, i) => {
@@ -27,6 +30,8 @@ export default function LanguageButtonsList() {
             key={`lang-${i}`}
             value={lang.value}
             flag={lang.flag}
+            onClick={() => setLanguage(lang.value)}
+            isSelected={language == lang.value}
           />
         );
       })}
