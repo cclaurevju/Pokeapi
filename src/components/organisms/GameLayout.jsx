@@ -39,7 +39,12 @@ export default function GameLayout() {
   }, [pokemons]);
 
   const handleSelection = (option) => {
-    if (option.id == selectedPokemon.id) setIsPokemonHidden(false);
+    if (option.id == selectedPokemon.id) {
+      setIsPokemonHidden(false);
+      setTimeout(() => {
+        setPokemons([]);
+      }, 3000);
+    }
   };
 
   return (
