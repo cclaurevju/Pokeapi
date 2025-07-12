@@ -2,47 +2,68 @@ import { useEffect, useState } from "react";
 import PokemonShadow from "../atoms/PokemonShadow";
 import GameButtonList from "../molecules/GameButtonList";
 import axiosInstance from "../../api/axiosInstance";
+import { getRandomIds, getRandomIndex } from "../../utils/random";
+
+const MAX_OPTIONS = 4;
 
 export default function GameLayout() {
   const [pokemons, setPokemons] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
   const [isPokemonHidden, setIsPokemonHidden] = useState(true);
-  const randomPokemonId = Math.floor(Math.random() * 4);
+  const [uniqueRandomIds, setUniqueRandomIds] = useState(() =>
+    getRandomIds(MAX_OPTIONS)
+  );
+  const [randomPokemonId, setRandomPokemonId] = useState(() =>
+    getRandomIndex(MAX_OPTIONS)
+  );
 
   const fetchPokemonInfo = async (id) => {
-    const response = await axiosInstance.get(`/pokemon/${id}`);
+    const response = await axiosInstance.get(`/pokemon-species/${id}`);
     const pokemonResponse = response.data;
     setPokemons((prev) =>
-      prev.length < 4
+      prev.length < MAX_OPTIONS && !prev.some((p) => p.id == pokemonResponse.id)
         ? [
             ...prev,
             {
               id: pokemonResponse.id,
-              label: pokemonResponse.name,
-              sprites: pokemonResponse.sprites,
+              names: pokemonResponse.names,
             },
           ]
         : prev
     );
   };
 
+  const fetchSelectedPokemon = async (id) => {
+    const response = await axiosInstance.get(`/pokemon/${id}`);
+    const pokemonResponse = response.data;
+    setSelectedPokemon({
+      id: pokemonResponse.id,
+      label: pokemonResponse.name,
+      sprites: pokemonResponse.sprites,
+    });
+  };
+
   useEffect(() => {
-    const uniqueRandomIds = [];
-    while (uniqueRandomIds.length < 4 && pokemons.length < 4) {
-      const randId = Math.floor(Math.random() * 150);
-      if (!uniqueRandomIds.includes(randId)) {
-        fetchPokemonInfo(randId);
-        uniqueRandomIds.push(randId);
-      }
+    if (pokemons.length == 0) {
+      uniqueRandomIds.forEach((id) => {
+        fetchPokemonInfo(id);
+      });
+      fetchSelectedPokemon(uniqueRandomIds[randomPokemonId]);
     }
-    setSelectedPokemon(pokemons[randomPokemonId]);
   }, [pokemons]);
+
+  const handleReset = () => {
+    setUniqueRandomIds(() => getRandomIds(MAX_OPTIONS));
+    setRandomPokemonId(() => getRandomIndex(MAX_OPTIONS));
+    setPokemons([]);
+    setIsPokemonHidden(true);
+  };
 
   const handleSelection = (option) => {
     if (option.id == selectedPokemon.id) {
       setIsPokemonHidden(false);
       setTimeout(() => {
-        setPokemons([]);
+        handleReset();
       }, 3000);
     }
   };
