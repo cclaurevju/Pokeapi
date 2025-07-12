@@ -1,11 +1,15 @@
-export default function LanguageButton({ value, flag }) {
+export default function LanguageButton({
+  value,
+  flag,
+  isSelected,
+  onClick = () => {},
+}) {
   return (
-    // <div className="lang-button">
     <img
-      className="lang-button"
+      className={`lang-button ${isSelected ? "lang-selected" : ""}`}
       src={`src/assets/images/flags/${flag}.png`}
-      alt=""
+      alt={value}
+      onClick={onClick}
     />
-    // </div>
   );
 }

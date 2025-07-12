@@ -76,6 +76,11 @@
 .lang-button {
     height: 68px;
     cursor: pointer;
+    filter: opacity(0.5);
+}
+
+.lang-selected {
+    filter: opacity(1);
 }
 
 .button {
