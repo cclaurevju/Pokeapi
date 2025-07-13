@@ -59,3 +59,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+.game-score-layout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
