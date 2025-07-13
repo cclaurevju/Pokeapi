@@ -10,5 +10,6 @@ export const getRandomIds = (max_options) => {
 };
 
 export const getRandomIndex = (max_options) => {
-  return Math.floor(Math.random() * max_options);
+  const randomIndex = Math.floor(Math.random() * max_options);
+  return randomIndex;
 };
