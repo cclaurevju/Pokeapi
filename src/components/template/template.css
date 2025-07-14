@@ -14,6 +14,12 @@
     gap: 50px;
 }
 
+.virtual-scroll {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .search-menu {
     background-color: #EA5D60;
     color: white;
