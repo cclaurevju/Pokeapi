@@ -70,12 +70,14 @@
 .pk-card-img-container {
     width: 50%;
     position: relative;
-    right: -40px;
+    right: -10%;
+    display: flex;
+    align-items: center;
 }
 
 .pk-card-img {
-    width: 210px;
-    height: 210px;
+    width: 200px;
+    height: 200px;
 }
 
 .search-input {

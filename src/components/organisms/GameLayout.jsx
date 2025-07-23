@@ -113,7 +113,11 @@ export default function GameLayout() {
             isPokemonHidden={isPokemonHidden}
           />
           <PokemonShadow
-            imageUrl={game.selectedPokemon.sprites.other.home.front_default}
+            imageUrl={
+              game.selectedPokemon.sprites.other["official-artwork"]
+                .front_default
+            }
+            // imageUrl={game.selectedPokemon.sprites.other.home.front_default}
             isHidden={isPokemonHidden}
             shake={shake}
           />
