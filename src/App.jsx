@@ -13,9 +13,9 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route index element={<PokemonSearcher />} />
-          <Route path="game" element={<PokemonGamePage />} />
-          <Route path="pokemon/:id" element={<PokemonDetailsPage />} />
+          <Route index element={<PokemonGamePage />} />
+          <Route path="home" element={<PokemonSearcher />} />
+          <Route path="pokemons/:id" element={<PokemonDetailsPage />} />
           <Route path="generations" element={<PokemonGenerationsPage />} />
           <Route path="types" element={<PokemonTypesPage />} />
           <Route path="*" element={<NotFoundPage />} />
