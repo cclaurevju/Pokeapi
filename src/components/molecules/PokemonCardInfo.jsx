@@ -1,11 +1,11 @@
 import PokemonCardId from "../atoms/PokemonCardId";
 import PokemonCardName from "../atoms/PokemonCardName";
 
-export default function PokemonCardInfo() {
+export default function PokemonCardInfo({ pokemon }) {
   return (
     <div className="pk-card-info">
-      <PokemonCardId />
-      <PokemonCardName />
+      <PokemonCardId id={pokemon.id} />
+      <PokemonCardName name={pokemon.name} />
     </div>
   );
 }

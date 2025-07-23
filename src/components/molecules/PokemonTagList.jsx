@@ -1,11 +1,10 @@
 import PokemonTagBox from "../atoms/PokemonTag";
 
-export default function PokemonTagList() {
-  const tags = [1, 2];
+export default function PokemonTagList({ types }) {
   return (
     <div className="pk-card-tag-list">
-      {tags.map((tag) => {
-        return <PokemonTagBox />;
+      {types.map((type) => {
+        return <PokemonTagBox tag={type.type.name} />;
       })}
     </div>
   );

@@ -12,6 +12,8 @@ const emptyState = {
 };
 
 const reducer = (state, action) => {
+  console.log("prev state", state, "action", action);
+
   switch (action.type) {
     case "add-pokemons": {
       const combinedArrays = [...state.pokemons, ...action.pokemons];
@@ -76,7 +78,7 @@ function PokemonCardList() {
   return (
     <div className="container pk-card-list content">
       {listState.pokemons.map((pokemon) => {
-        return <PokemonCard key={pokemon.name} />;
+        return <PokemonCard key={pokemon.name} pokemonUrl={pokemon.url} />;
       })}
       <div className="virtual-scroll">
         <Button
