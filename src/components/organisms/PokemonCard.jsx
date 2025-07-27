@@ -2,16 +2,24 @@ import { useEffect } from "react";
 import PokemonCardInfo from "../molecules/PokemonCardInfo";
 import PokemonTagList from "../molecules/PokemonTagList";
 import { useApi } from "../../hooks/useApi";
+import { useNavigate } from "react-router-dom";
 
 export default function PokemonCard({ pokemonUrl }) {
   const { data: pokemon, get } = useApi(pokemonUrl);
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (!pokemon) {
       get();
     }
   }, []);
+
+  const handleClick = () => {
+    navigate(`/pokemons/${pokemon.id}`);
+  };
+
   return pokemon ? (
-    <div className="pk-card-container">
+    <div className="pk-card-container" onClick={handleClick}>
       <div className={`pk-card bg-color-type-${pokemon.types[0].type.name}`}>
         <div className="pk-card-mask">
           <img
