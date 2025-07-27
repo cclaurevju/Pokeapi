@@ -1,3 +1,9 @@
+import TabOption from "../atoms/TabOption";
+
 export default function TabOptions() {
-  return <div>TabOptions</div>;
+  return (
+    <div>
+      <TabOption />
+    </div>
+  );
 }
