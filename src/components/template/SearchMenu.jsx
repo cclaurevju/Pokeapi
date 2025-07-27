@@ -1,6 +1,6 @@
 import SearchInput from "../organisms/SearchInput";
 
-export default function SearchMenu() {
+export default function SearchMenu({ onChange }) {
   return (
     <div className="search-menu subheader">
       <div className="search-content">
@@ -11,7 +11,7 @@ export default function SearchMenu() {
             alt=""
           />
         </div>
-        <SearchInput />
+        <SearchInput onChange={onChange} />
         <div className="search-menu-content-dots">
           <img
             className="search-menu-contant-dots-img"

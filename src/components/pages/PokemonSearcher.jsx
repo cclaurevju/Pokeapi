@@ -2,6 +2,7 @@ import SearchMenu from "../template/SearchMenu";
 import PokemonCardList from "../template/PokemonCardList";
 import axiosInstance from "../../api/axiosInstance";
 import { useEffect, useReducer } from "react";
+import { formatId } from "../../utils/formatId";
 
 const QUANTITY_LIMIT = 25;
 
@@ -9,6 +10,7 @@ const emptyState = {
   next: null,
   pokemons: [],
   isVirtualScrollActive: true,
+  filter: "",
 };
 
 const reducer = (state, action) => {
@@ -37,6 +39,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         isVirtualScrollActive: false,
+      };
+
+    case "set-filter":
+      return {
+        ...state,
+        filter: action.filter,
       };
 
     default:
@@ -79,13 +87,31 @@ export default function PokemonSearcher() {
   const handleLoadMore = () => {
     dispatch({ type: "activate-fetch" });
   };
+
+  const handleSearcher = (e) => {
+    dispatch({ type: "set-filter", filter: e.target.value });
+  };
+
+  const filteredPokemonsByName = listState.pokemons.filter((p) => {
+    console.log(p.url.split("/"));
+    return (
+      p.name.toLowerCase().includes(listState.filter.toLowerCase()) ||
+      formatId(p.url.split("/").slice(-2, -1)[0]).includes(listState.filter)
+    );
+  });
+
   return (
     <>
-      <SearchMenu />
-      <PokemonCardList
-        handleLoadMore={handleLoadMore}
-        pokemons={listState.pokemons}
-      />
+      <SearchMenu onChange={handleSearcher} />
+      {filteredPokemonsByName.length == 0 ? (
+        //TODO change to title style
+        <div>Not found</div>
+      ) : (
+        <PokemonCardList
+          handleLoadMore={handleLoadMore}
+          pokemons={filteredPokemonsByName}
+        />
+      )}
     </>
   );
 }
