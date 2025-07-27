@@ -38,9 +38,8 @@
     align-items: center;
     gap: 5px;
     border-radius: 3px;
-    width: fit-content;
+    /* width: fit-content; */
 }
-
 
 .pk-card-tag-text {
     text-align: center;
@@ -51,7 +50,22 @@
 }
 
 .pk-card-tag-img {
-    width: 1rem;
+    /* width: 1rem; */
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.pk-tag-sm {
+    height: 1rem;
+}
+
+.pk-tag-md {
+    height: 1.5rem;
+}
+
+.pk-card-circle {
+    border-radius: 100%;
+    padding: 7.5%;
 }
 
 .header-brand-title {
