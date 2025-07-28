@@ -15,7 +15,7 @@ export default function PokemonCard({ pokemonUrl }) {
   }, []);
 
   const handleClick = () => {
-    navigate(`/pokemons/${pokemon.id}`);
+    navigate(`./${pokemon.id}`, { relative: true });
   };
 
   return pokemon ? (

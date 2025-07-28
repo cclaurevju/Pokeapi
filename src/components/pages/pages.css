@@ -8,3 +8,8 @@
         max-width: 672px;
     }
 }
+
+.pk-details-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

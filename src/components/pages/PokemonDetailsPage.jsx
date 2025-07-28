@@ -3,7 +3,7 @@ import PokemonDetailsInfoTemplate from "../template/PokemonDetailsInfoTemplate";
 
 export default function PokemonDetailsPage() {
   return (
-    <div>
+    <div className="pk-details-page">
       <PokemonDetailsInfoTemplate />
       <PokemonDetailsImageTemplate />
     </div>

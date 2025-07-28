@@ -78,3 +78,58 @@
     grid-area: "content";
     padding: 70px 128px;
 }
+.pk-details-image-template {
+    z-index: 10;
+    position: relative;
+}
+
+.pk-details-image-layout {
+    display: flex;
+    flex-direction: column;
+    justify-items: end;
+    align-items: center;
+    padding: 57px 29px;
+    z-index: 30;
+    gap: 40px;
+}
+
+.pk-details-image-mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* z-index: 20; */
+    padding: 57px 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pk-details-mask-dots-group {
+    display: flex;
+    justify-content: center;
+    gap: 32px
+}
+
+.pk-details-mask-dots {
+    width: 250px;
+    z-index: inherit;
+}
+
+.pk-details-mask-pokeball {
+    width: 400px;
+    z-index: inherit;
+}
+
+.pk-details-image {
+    width: 400px;
+    z-index: 40;
+}
+
+.pk-details-button-group {
+    display: flex;
+    gap: 20px;
+}
+
+.pk-details-info-template {
+    padding: 20px 98px;
+}

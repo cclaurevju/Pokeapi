@@ -14,7 +14,7 @@ export default function PokemonTagBox({
     >
       <img
         className="pk-card-tag-img"
-        src={`src\\assets\\images\\icons\\${tag}.png`}
+        src={`/src/assets/images/icons/${tag}.png`}
       />
       {showLabel ? (
         <div className="pk-card-tag-text">{capitalizeText(tag)}</div>

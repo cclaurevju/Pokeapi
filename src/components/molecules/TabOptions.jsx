@@ -2,7 +2,9 @@ import TabOption from "../atoms/TabOption";
 
 export default function TabOptions() {
   return (
-    <div>
+    <div className="tab-options">
+      <TabOption />
+      <TabOption />
       <TabOption />
     </div>
   );

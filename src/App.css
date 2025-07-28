@@ -1,6 +1,5 @@
 @import "./assets/styles/bg-colors.css";
 @import "./assets/styles/type-colors.css";
-
 .container {
     padding: calc(0.25rem * 8);
 }

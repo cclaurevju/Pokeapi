@@ -1,5 +1,5 @@
 import CardInfoText from "../atoms/CardInfoText";
-import CardDetailsRow from "../molecules/CardDetailsRow";
+import CardDetailsRow from "./CardDetailsRow";
 
 export default function CardStats() {
   return (

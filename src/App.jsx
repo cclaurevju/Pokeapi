@@ -14,8 +14,10 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<PokemonGamePage />} />
-          <Route path="home" element={<PokemonSearcher />} />
-          <Route path="pokemons/:id" element={<PokemonDetailsPage />} />
+          <Route path="pokemons">
+            <Route index element={<PokemonSearcher />} />
+            <Route path=":id" element={<PokemonDetailsPage />} />
+          </Route>
           <Route path="generations" element={<PokemonGenerationsPage />} />
           <Route path="types" element={<PokemonTypesPage />} />
           <Route path="*" element={<NotFoundPage />} />

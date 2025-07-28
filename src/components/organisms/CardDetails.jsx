@@ -1,11 +1,3 @@
-import CardInfoText from "../atoms/CardInfoText";
-import CardDetailsRow from "../molecules/CardDetailsRow";
-
-export default function CardDetails() {
-  return (
-    <div>
-      <CardInfoText />
-      <CardDetailsRow />
-    </div>
-  );
+export default function CardDetails({ children }) {
+  return <div className="card-details">{children}</div>;
 }
