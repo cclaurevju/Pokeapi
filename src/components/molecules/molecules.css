@@ -79,3 +79,25 @@
     align-items: start;
     gap: 20px;
 }
+
+.pk-evolution-image {
+    width: 112px;
+}
+
+.pk-evolution-image-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pk-evolution-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-evolution {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
