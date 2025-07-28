@@ -12,4 +12,5 @@
 .pk-details-page {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 90dvh;
 }

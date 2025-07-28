@@ -1,3 +1,3 @@
-export default function CardDetailRow() {
-  return <div>CardDetailRow</div>;
+export default function CardDetailRow({ children }) {
+  return <div className="card-details-row">{children}</div>;
 }
